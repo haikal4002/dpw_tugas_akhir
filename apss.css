@@ -2,6 +2,8 @@ body {
     padding: 0;
     margin: 0;
     font-family: "Open Sans", sans-serif;
+    
+    
 }
 
 .header{
@@ -40,6 +42,7 @@ body {
     padding: 0;
     border-bottom: 3px solid #345965;
     border-top: 3px solid #345965;
+    
 }
 
 .menu .navbar {
@@ -72,19 +75,25 @@ body {
 
 .sidebar {
     width: 350px;
-    height: 420px;
+    height: 500px;
     background-color: #89cfef;
     margin: 20px;
     border-radius: 10px;
     text-align: center;
+	display: flex;
+	flex-direction: column;
+	
     
 }
 .news {
-    padding: 0;
+    padding: 10px;
+	display: flex;
+	flex-direction: column;
 }
 .news li {
     display: flex;
     margin-bottom: 30px;
+    
 }
 
 .news img {
@@ -113,82 +122,40 @@ body {
 .footer p{
     display: flex;
     margin: auto;
-    justify-content: center;
     font-weight: 600;
     font-size: 25;
 }
 
 
-/*css evaluation page*/
+/* About-Us */
 
-.content-evaluation {
-    display: flex;
-    margin-top: 20px;
-    border-radius: 10px;
-    height: 650px;
-    width: 95%;
-    box-shadow: 0 0 10px;
-    justify-content: center;
-    margin-bottom: 20px;
+.content_about_us {
+	padding: 25px;
+	width: 75%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
 }
 
-.content-evaluation .tabel {
-    height: 550px;
-    width: 90%;
-    border-collapse: collapse;
-    background-color: #cbe6f2;
+.content_about_us .heading {
+	justify-content: center;
+	text-align: center;
+	
+	
 }
 
-.content-evaluation .tabel caption, th, td {
-    padding: 1rem;
+.content_about_us ul {
+	padding: 0;
+	list-style-type: none;
 }
 
-.content-evaluation .tabel th, td {
-    border: 1px solid black;
-} 
-
-.content-evaluation .tabel caption {
-    font-size: 20px;
-    font-weight: 700;
+.content_about_us .descriptor {
+	text-align: justify;
 }
 
-.content-evaluation .tabel th {
-    background-color: #11749F;
-}
-
-.content-evaluation .tabel tr:nth-child(even){
-    background-color: #AFD7FF;
+.table_work p {
+	text-align: center;
 }
 
 
-.content{
-    margin-left: 0px;
-}
-.content img{ 
-    width: 1000px;
-    margin: 30px 0px;
-}
 
-
-/*css form page*/
-.content  h2{
-    text-align: center;
-    margin-left: 50px;
-}
-
-.content form{
-    margin-left: 50px;
-    align-content: right;
-}
-
-
-input,textarea,select {
-    margin-bottom: 40px;
-    width: 100%;
-    padding: 10px;
-}
-input[type="laki"],
-input[type="radio"] {
-    width: 20px;
-    margin: 5px;
-}
