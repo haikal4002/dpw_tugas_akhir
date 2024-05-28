@@ -126,6 +126,46 @@ body {
     font-size: 25;
 }
 
+/*css evaluation page*/
+
+.content-evaluation {
+    display: flex;
+    margin-top: 20px;
+    border-radius: 10px;
+    height: 650px;
+    width: 940px;
+    box-shadow: 0 0 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.content-evaluation .tabel {
+    height: 550px;
+    width: 90%;
+    border-collapse: collapse;
+    background-color: #cbe6f2;
+}
+
+.content-evaluation .tabel caption, th, td {
+    padding: 1rem;
+}
+
+.content-evaluation .tabel th, td {
+    border: 1px solid black;
+} 
+
+.content-evaluation .tabel caption {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.content-evaluation .tabel th {
+    background-color: #11749F;
+}
+
+.content-evaluation .tabel tr:nth-child(even){
+    background-color: #AFD7FF;
+}   
 
 /* About-Us */
 
