@@ -1,3 +1,4 @@
+/* Header, Menu, Sidebar, Footer (Kecuali content)*/
 body {
     padding: 0;
     margin: 0;
@@ -126,6 +127,17 @@ body {
     font-size: 25;
 }
 
+/* Home */
+
+
+
+/* Form */
+
+
+
+/* Evaluation */
+
+
 
 /* About-Us */
 
@@ -155,36 +167,5 @@ body {
 
 .table_work p {
     text-align: center;
-}
-
-/*css form page*/
-.content-form {
-    display: auto;
-    margin-left: 400px;
-    margin-top: -400px;
-}
-
-.content-form  h2{
-    text-align: center;
-    margin-left: 50px;
-}
-
-.content-form form{
-    margin: 150px;
-}
-
-input,textarea,select {
-    margin-bottom: 40px;
-    width: 100%;
-    padding: 10px;
-}
-input[type="laki"],
-input[type="radio"] {
-    width: 20px;
-    margin: 5px;
-}
-
-input[type="submit"]{
-    width: 100px;
 }
 
