@@ -157,5 +157,28 @@ body {
 	text-align: center;
 }
 
+/*css form page*/
+.content  h2{
+    text-align: center;
+    margin-left: 50px;
+}
+
+.content form{
+    margin-left: 50px;
+    align-content: right;
+}
+
+
+input,textarea,select {
+    margin-bottom: 40px;
+    width: 100%;
+    padding: 10px;
+}
+input[type="laki"],
+input[type="radio"] {
+    width: 20px;
+    margin: 5px;
+}
+
 
 
