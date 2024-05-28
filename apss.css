@@ -1,0 +1,161 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    
+    
+}
+
+.header{
+    display: flex;
+    background-color: #11749F;
+    height: 70px;
+    justify-content: flex-start;
+    margin: 0;
+}
+
+.header a {
+    width: 80px;
+    
+}
+
+.header img {
+    margin-left: 20px; 
+    width: 78px;  
+}
+
+.header p {
+    font-size: 15px;
+    font-weight: 600;
+    color: white;
+    padding: 10px;
+    align-self: center;
+    margin-left: 15px;
+
+}
+
+.menu {
+    background-color: #cbe6f2;
+    height: 70px;
+    display: flex;
+    margin-top: 0;
+    padding: 0;
+    border-bottom: 3px solid #345965;
+    border-top: 3px solid #345965;
+    
+}
+
+.menu .navbar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.menu .navbar li {
+    list-style-type: none ;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+    
+}
+
+.menu .navbar li a {
+    text-decoration: none;
+    color: black;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+}
+
+.sidebar {
+    width: 350px;
+    height: 500px;
+    background-color: #89cfef;
+    margin: 20px;
+    border-radius: 10px;
+    text-align: center;
+	display: flex;
+	flex-direction: column;
+	
+    
+}
+.news {
+    padding: 10px;
+	display: flex;
+	flex-direction: column;
+}
+.news li {
+    display: flex;
+    margin-bottom: 30px;
+    
+}
+
+.news img {
+    width: 80px;
+    margin: 10px;
+    
+}
+.news p {
+    text-align: start;
+    align-self: center;
+    font-size: 18px;
+}
+.news a {
+    text-decoration: none;
+    color: black;
+}
+
+.footer {
+    display: flex;
+    background-color: #11749F;
+    height: 70px;
+    justify-content: flex-start;
+    margin: 0;
+}
+
+.footer p{
+    display: flex;
+    margin: auto;
+    font-weight: 600;
+    font-size: 25;
+}
+
+
+/* About-Us */
+
+.content_about_us {
+	padding: 25px;
+	width: 75%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+.content_about_us .heading {
+	justify-content: center;
+	text-align: center;
+	
+	
+}
+
+.content_about_us ul {
+	padding: 0;
+	list-style-type: none;
+}
+
+.content_about_us .descriptor {
+	text-align: justify;
+}
+
+.table_work p {
+	text-align: center;
+}
+
+
+
