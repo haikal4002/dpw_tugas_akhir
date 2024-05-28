@@ -38,48 +38,46 @@
                 </li>
             </ul>
         </div>
-        <div class="content">
-        	<!-- Form pendaftaran menggunakan validasi javascripts-->
-        	<h2>FORM PENDAFTARAN</h2>
-    		<form action="action.html" method="post">
-				<label for="name">Nama Lengkap* :</label>
-				<input name="name" id="name" placeholder="Masukkan nama lengkap">
-                <br>
-                <label for="tanggal">Masukkan Tanggal :</label>
-                <input type="date" id="tanggal" name="date">
-                <br>
-				<label for="email">Email* :</label>
-				<input name="email" id="email" placeholder="Masukkan email">
-				<br>
-				<label for="nomor">Mobile Phone* :</label>
-				<input name="nomor" id="nomor" placeholder="Masukkan mobile phone">
-				<br>
-				<label>Masukkan Alamat* :</label>
-				<textarea id="alamat" name="alamat" cols="30" rows="1" placeholder="Masukkan Alamat"></textarea>
-			</form>
-		<label for="post">Enter your post code:</label>
-        <input type="text" id="post" name="post" required>
-        <br><br>
-
-        <!-- Bagian Dropdown -->
-        <label for="dropdown">Competition category</label>
-        <select id="dropdown" name="dropdown">
-            <option value="option1">Easy Surving</option>
-            <option value="option2">Medium Surving</option>
-            <option value="option3">Hard Surfing</option>
-            <option value="option3">Expert Surfing</option>
-        </select>
-        <br><br>
-
-        <!-- Bagian Radio Button -->
-        <label>Gender</label><br>
-        <input type="radio" id="radio1" name="radioGroup" value="radio1" required>
-        <label for="radio1">Male</label><br>
-        <input type="radio" id="radio2" name="radioGroup" value="radio2">
-        <label for="radio2">Female</label><br>
-        <!-- Tombol Submit -->
-        <button type="submit">Submit</button>
-        </div>
+    </div>
+    <div class="content">
+        <!-- Form pendaftaran menggunakan validasi javascripts-->
+        <h2>FORM PENDAFTARAN</h2>
+        <form action="action.html" method="post">
+            <label for="name">Nama Lengkap* :</label>
+            <input name="name" id="name" placeholder="Masukkan nama lengkap">
+            <br>
+            <label for="tanggal">Masukkan Tanggal :</label>
+            <input type="date" id="tanggal" name="date">
+            <br>
+            <label for="email">Email* :</label>
+            <input name="email" id="email" placeholder="Masukkan email">
+            <br>
+            <label for="nomor">Mobile Phone* :</label>
+            <input name="nomor" id="nomor" placeholder="Masukkan mobile phone">
+            <br>
+            <label>Masukkan Alamat* :</label>
+            <textarea id="alamat" name="alamat" cols="30" rows="1" placeholder="Masukkan Alamat"></textarea>
+            <label for="post">Masukkan Kode Pos:</label>
+            <input type="text" id="post" name="post" placeholder="Masukkan Kode Pos">
+            <br><br>
+            <label for="kategori">Pilih Kategori</label>
+            <input id="kategori" name="kategori" list="categories" placeholder="Pilih Kategori">
+            <datalist id="categories">
+                <option value="Easy Surfing">
+                <option value="Medium Surfing">
+                <option value="Hard Surfing">
+                <option value="Expert Surfing">
+            </datalist>
+            <b>Pilih Gender :</b>
+            <br>
+            <label for="laki">Laki-laki</label>
+            <input name="via" id="laki" value="laki" type="radio">
+            <br>
+            <label for="Perempuan">Perempuan</label>
+            <input name="via" id="Perempuan" value="Perempuan" type="radio">
+            <br>
+            <input type="submit" value="Kirim">
+        </form>
     </div>
     <div class="footer">
         <p>© Programmed by Group : DPW2023-2-A02</p>
