@@ -168,7 +168,8 @@ body {
     margin-top: 20px;
     border-radius: 10px;
     height: 650px;
-    width: 940px;
+    padding: 25px;
+    width: 75%;
     justify-content: center;
     margin-bottom: 20px;
 }
