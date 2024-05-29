@@ -136,6 +136,7 @@ body {
 .content img{
     width: 600px;
     margin: 5px;
+    justify-content: center;
 }
 
 
