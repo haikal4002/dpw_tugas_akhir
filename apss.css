@@ -155,7 +155,33 @@ body {
 
 /* Evaluation */
 
+.content_about_us {
+	padding: 25px;
+	width: 75%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
 
+.content_about_us .heading {
+	justify-content: center;
+	text-align: center;
+	
+	
+}
+
+.content_about_us ul {
+	padding: 0;
+	list-style-type: none;
+}
+
+.content_about_us .descriptor {
+	text-align: justify;
+}
+
+.table_work p {
+	text-align: center;
+}
 
 /* About-Us */
 
