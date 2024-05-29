@@ -132,8 +132,26 @@ body {
 
 
 /* Form */
+.container .content-form {
+    width: 900px;
+}
 
+.container .content-form h2 {
+    text-align: center;    
+}
 
+.container .content-form input,textarea,select {
+    margin-bottom: 40px;
+    width: 100%;
+    padding: 10px;
+}
+.container .content-form input[type="radio"] {
+    width: 30px;
+}
+
+.container .content-form input[type="submit"]{
+    width:100px;
+}
 
 /* Evaluation */
 
@@ -168,4 +186,3 @@ body {
 .table_work p {
     text-align: center;
 }
-
