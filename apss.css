@@ -162,29 +162,44 @@ body {
 
 /* Evaluation */
 
-.content_about_us {
-    padding: 25px;
-    width: 75%;
+.content-evaluation {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
-
-.content_about_us .heading {
+    margin-top: 20px;
+    border-radius: 10px;
+    height: 650px;
+    width: 940px;
+    box-shadow: 0 0 10px;
     justify-content: center;
-    text-align: center;
-    
-    
+    margin-bottom: 20px;
 }
 
-.content_about_us ul {
-    padding: 0;
-    list-style-type: none;
+.content-evaluation .tabel {
+    height: 550px;
+    width: 90%;
+    border-collapse: collapse;
+    background-color: #cbe6f2;
 }
 
-.content_about_us .descriptor {
-    text-align: justify;
+.content-evaluation .tabel caption, th, td {
+    padding: 1rem;
 }
+
+.content-evaluation .tabel th, td {
+    border: 1px solid black;
+} 
+
+.content-evaluation .tabel caption {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.content-evaluation .tabel th {
+    background-color: #11749F;
+}
+
+.content-evaluation .tabel tr:nth-child(even){
+    background-color: #AFD7FF;
+}   
 
 .table_work p {
     text-align: center;
