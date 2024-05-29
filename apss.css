@@ -134,6 +134,7 @@ body {
 }
 
 .content img{
+    display: block;
     width: 60%;
     margin: 5px;
     justify-content: center;
@@ -147,7 +148,8 @@ body {
 
 /* Form */
 .container .content-form {
-    width: 900px;
+    width: 75%;
+    padding: 25px;
 }
 
 .container .content-form h2 {
@@ -179,6 +181,7 @@ body {
     border-radius: 10px;
     height: 650px;
     width: 75%;
+    padding: 25px;
     justify-content: center;
     margin-bottom: 20px;
 }
