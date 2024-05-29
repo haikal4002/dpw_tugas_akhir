@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,9 +41,12 @@
         <div class="content-form">
         <!-- Form pendaftaran menggunakan validasi javascripts-->
             <h2>FORM PENDAFTARAN</h2>
-            <form action="action.html" method="post">
+            <form action="evaluation.html" method="post">
+                <!-- Membuat masukan nama -->
                 <label for="name">Nama Lengkap* :</label>
                 <input name="name" id="name" placeholder="Masukkan nama lengkap">
+                <div id="nameError" class="error"></div>
+                <!-- Membuat radio button untuk memilih gender -->
                 <b>Pilih Gender :</b>
                 <br>
                 <label for="laki">Laki-laki</label>
@@ -51,6 +54,7 @@
                 <label for="Perempuan">Perempuan</label>
                 <input name="via" id="Perempuan" value="Perempuan" type="radio">
                 <br>
+                <!-- Membuat dropdown untuk memilihh kategori perlombaan-->
                 <label for="kategori">Pilih Kategori</label>
                 <input id="kategori" name="kategori" list="categories" placeholder="Pilih Kategori">
                 <datalist id="categories">
@@ -59,20 +63,30 @@
                     <option value="Hard Surfing">
                     <option value="Expert Surfing">
                 </datalist>
+                <!-- Membuat masukan tanggal -->
                 <label for="tanggal">Masukkan Tanggal :</label>
                 <input type="date" id="tanggal" name="date">
                 <br>
+                <!-- Membuat masukan email -->
                 <label for="email">Email* :</label>
                 <input name="email" id="email" placeholder="Masukkan email">
                 <br>
+                <!-- Membuat msaukan nomor telepon -->
                 <label for="nomor">Mobile Phone* :</label>
                 <input name="nomor" id="nomor" placeholder="Masukkan mobile phone">
                 <br>
+                <!-- Membuat msaukan alamat menggunakan textarea -->
                 <label>Masukkan Alamat* :</label>
                 <textarea id="alamat" name="alamat" cols="30" rows="1" placeholder="Masukkan Alamat"></textarea>
+                <!-- Membuat masukan kode pos -->
                 <label for="post">Masukkan Kode Pos:</label>
                 <input type="text" id="post" name="post" placeholder="Masukkan Kode Pos">
                 <br>
+                <!-- Membuat checkbox untuk menyetujui SK -->
+                <label for="checkbox"> Setuju menerima dan mengikuti syarat dan ketentuan yang berlaku</label>
+                <input type="checkbox" id="checkbox" name="checkbox" value="Option 1"> 
+                <br> 
+                <!-- Membuat tombol submit yang akan menuju ke halaman -->
                 <input type="submit" value="Kirim">
             </form>
         </div>
