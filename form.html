@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form</title>
+    <title>HomePage</title>
     <link rel="stylesheet" href="apss.css">
 </head>
 <body>
@@ -38,46 +38,44 @@
                 </li>
             </ul>
         </div>
-    </div>
-    <div class="content">
+        <div class="content-form">
         <!-- Form pendaftaran menggunakan validasi javascripts-->
-        <h2>FORM PENDAFTARAN</h2>
-        <form action="action.html" method="post">
-            <label for="name">Nama Lengkap* :</label>
-            <input name="name" id="name" placeholder="Masukkan nama lengkap">
-            <br>
-            <label for="tanggal">Masukkan Tanggal :</label>
-            <input type="date" id="tanggal" name="date">
-            <br>
-            <label for="email">Email* :</label>
-            <input name="email" id="email" placeholder="Masukkan email">
-            <br>
-            <label for="nomor">Mobile Phone* :</label>
-            <input name="nomor" id="nomor" placeholder="Masukkan mobile phone">
-            <br>
-            <label>Masukkan Alamat* :</label>
-            <textarea id="alamat" name="alamat" cols="30" rows="1" placeholder="Masukkan Alamat"></textarea>
-            <label for="post">Masukkan Kode Pos:</label>
-            <input type="text" id="post" name="post" placeholder="Masukkan Kode Pos">
-            <br><br>
-            <label for="kategori">Pilih Kategori</label>
-            <input id="kategori" name="kategori" list="categories" placeholder="Pilih Kategori">
-            <datalist id="categories">
-                <option value="Easy Surfing">
-                <option value="Medium Surfing">
-                <option value="Hard Surfing">
-                <option value="Expert Surfing">
-            </datalist>
-            <b>Pilih Gender :</b>
-            <br>
-            <label for="laki">Laki-laki</label>
-            <input name="via" id="laki" value="laki" type="radio">
-            <br>
-            <label for="Perempuan">Perempuan</label>
-            <input name="via" id="Perempuan" value="Perempuan" type="radio">
-            <br>
-            <input type="submit" value="Kirim">
-        </form>
+            <h2>FORM PENDAFTARAN</h2>
+            <form action="action.html" method="post">
+                <label for="name">Nama Lengkap* :</label>
+                <input name="name" id="name" placeholder="Masukkan nama lengkap">
+                <b>Pilih Gender :</b>
+                <br>
+                <label for="laki">Laki-laki</label>
+                <input name="via" id="laki" value="laki" type="radio">
+                <label for="Perempuan">Perempuan</label>
+                <input name="via" id="Perempuan" value="Perempuan" type="radio">
+                <br>
+                <label for="kategori">Pilih Kategori</label>
+                <input id="kategori" name="kategori" list="categories" placeholder="Pilih Kategori">
+                <datalist id="categories">
+                    <option value="Easy Surfing">
+                    <option value="Medium Surfing">
+                    <option value="Hard Surfing">
+                    <option value="Expert Surfing">
+                </datalist>
+                <label for="tanggal">Masukkan Tanggal :</label>
+                <input type="date" id="tanggal" name="date">
+                <br>
+                <label for="email">Email* :</label>
+                <input name="email" id="email" placeholder="Masukkan email">
+                <br>
+                <label for="nomor">Mobile Phone* :</label>
+                <input name="nomor" id="nomor" placeholder="Masukkan mobile phone">
+                <br>
+                <label>Masukkan Alamat* :</label>
+                <textarea id="alamat" name="alamat" cols="30" rows="1" placeholder="Masukkan Alamat"></textarea>
+                <label for="post">Masukkan Kode Pos:</label>
+                <input type="text" id="post" name="post" placeholder="Masukkan Kode Pos">
+                <br>
+                <input type="submit" value="Kirim">
+            </form>
+        </div>
     </div>
     <div class="footer">
         <p>© Programmed by Group : DPW2023-2-A02</p>
