@@ -127,6 +127,8 @@ body {
     font-size: 25;
 }
 
+/* --------------------------------------------------------------------------------------------------- */
+
 /* Home */
 .content{
     padding: 25px;
@@ -134,7 +136,7 @@ body {
 }
 
 .content img{
-    width: 600px;
+    width: 60%;
     margin: 5px;
     justify-content: center;
 }
