@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-	<!--     metadata dengan properti character settingnya yaitu UTF-8 -->
+    <!--     metadata dengan properti character settingnya yaitu UTF-8 -->
     <meta charset="UTF-8">
-	<!-- 	mengontrol tampilan skala halaman sesuai dengan perangkat -->
+    <!--    mengontrol tampilan skala halaman sesuai dengan perangkat -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form</title>
     <link rel="stylesheet" href="apss.css">
 </head>
 <body>
-	<!-- 	header -->
+    <!--    header -->
     <div class="header">
         <a href="index.html"><img src="assets/surfing.png" alt="logo"></a>
         <p>Olahraga <br>Selancar</p>
     </div>
-	<!-- 	menu navbar -->
+    <!--    menu navbar -->
     <div class="menu">
         <ul class="navbar">
             <li><a href="index.html">HOME</a></li>
@@ -23,9 +23,9 @@
             <li><a href="about_us.html">ABOUT US</a></li>
         </ul>
     </div>
-	<!-- wrap container -->
+    <!-- wrap container -->
     <div class="container">
-	<!-- 	sidebar -->
+    <!--    sidebar -->
         <div class="sidebar">
             <h3>HEADLINE</h3>
             <ul class="news">
@@ -49,11 +49,9 @@
             <h2>FORM PENDAFTARAN</h2>
             <form action="evaluation.html" method="post">
                 <!-- Membuat masukan nama -->
-                <label for="fname">Fisrt Name* :</label>
-                <input name="fname" id="fname" placeholder="Masukkan nama lengkap">
-		<!-- Membuat masukan nama -->
-                <label for="lname">Last Name* :</label>
-                <input name="lname" id="lname" placeholder="Masukkan nama lengkap">
+                <label for="name">Nama Lengkap* :</label>
+                <input name="name" id="name" placeholder="Masukkan nama lengkap">
+                <div id="nameError" class="error"></div>
                 <!-- Membuat radio button untuk memilih gender -->
                 <b>Pilih Gender :</b>
                 <br>
@@ -62,14 +60,19 @@
                 <label for="Perempuan">Perempuan</label>
                 <input name="via" id="Perempuan" value="Perempuan" type="radio">
                 <br>
-                <!-- Membuat dropdown untuk memilihh kategori perlombaan-->
-                <label for="kategori">Pilih Kategori</label>
-                <input id="kategori" name="kategori" list="categories" placeholder="Pilih Kategori">
-                <datalist id="categories">
-                    <option value="Easy Surfing">
-                    <option value="Medium Surfing">
-                    <option value="Hard Surfing">
-                    <option value="Expert Surfing">
+                <!-- Membuat dropdown untuk memilihh Domisli-->
+                <label for="kategori">Pilih Domisli</label>
+                <input id="kategori" name="kategori" list="kota" placeholder="Pilih Kategori">
+                <datalist id="kota">
+                    <option value="Kabupaten Badung">
+                    <option value="Kabupaten Bangli">
+                    <option value="Kabupaten Buleleng">
+                    <option value="Kabupaten Gianyar">
+                    <option value="Kabupaten Jembrana">
+                    <option value="Kabupaten Klungkung">
+                    <option value="Kabupaten Karangasem">
+                    <option value="Kabupaten Tabanan">
+                    <option value="Kota Denpasar">
                 </datalist>
                 <!-- Membuat masukan tanggal -->
                 <label for="tanggal">Masukkan Tanggal :</label>
@@ -86,6 +89,9 @@
                 <!-- Membuat msaukan alamat menggunakan textarea -->
                 <label>Masukkan Alamat* :</label>
                 <textarea id="alamat" name="alamat" cols="30" rows="1" placeholder="Masukkan Alamat"></textarea>
+                <!-- Membuat masukan kode pos -->
+                <label for="post">Masukkan Kode Pos:</label>
+                <input type="text" id="post" name="post" placeholder="Masukkan Kode Pos">
                 <br>
                 <!-- Membuat checkbox untuk menyetujui SK -->
                 <label for="checkbox"> Setuju menerima dan mengikuti syarat dan ketentuan yang berlaku</label>
