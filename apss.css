@@ -248,3 +248,35 @@ body {
 .table_work p {
     text-align: center;
 }
+
+.assets_all ul {
+    display: flex;
+    flex-direction: column;
+    /* background-color: red; */
+
+
+}
+
+.assets_all ul li {
+    display: flex;
+    flex-direction: column;
+}
+
+.assets_all h3 {
+    margin-top: 50px;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.assets_all .img-about-us:nth-child(1) {
+    margin-top: 10px;
+}
+
+.assets_all .img-about-us {
+    margin-top: 100px;
+    margin-bottom: 20px;
+    padding: 0;
+    width: 50%;
+    border: 1px black dotted;
+
+}
