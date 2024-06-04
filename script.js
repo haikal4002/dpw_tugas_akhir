@@ -10,9 +10,13 @@ form.addEventListener("submit", function(abc){
 	if (tes === ""){
 		abc.preventDefault()
 		alfa.textContent = "Masukkan tidak boleh kosong"
+		alfa.style.color = "red"
 	}else if (!alphabet.test(tes)){
 		abc.preventDefault()
-		alfa.textContent = 'Masukkan format berupa alfabet'	
+		alfa.textContent = 'Masukkan format berupa alfabet'
+		alfa.style.color = "red"	
+	}else{
+		alfa.textContent = ""
 	}
 
 // Validasi radio button dan WAJIB diisi
@@ -32,6 +36,7 @@ form.addEventListener("submit", function(abc){
 	} else {
 		abc.preventDefault()
 		radioo.textContent = "Harus memilih salah satu"
+		radioo.style.color = "red"
 	}
 
 // Validasi numerik dan WAJIB diisi
@@ -43,16 +48,23 @@ form.addEventListener("submit", function(abc){
 	if (nomer === ""){
 		abc.preventDefault()
 		nomerTelepon.textContent = "Masukkan tidak boleh kosong"
+		nomerTelepon.style.color = "red"
 	}else if (!cekNum.test(nomer)){
 		abc.preventDefault()
-		nomerTelepon.textContent = 'Masukkan format berupa numerik'	
+		nomerTelepon.textContent = 'Masukkan format berupa numerik'
+		nomerTelepon.style.color = "red"
 	}else if(nomer.length < 11){
 		abc.preventDefault()
-		nomerTelepon.textContent = 'Nomor telepon harus minimal 11 digit'	
+		nomerTelepon.textContent = 'Nomor telepon harus minimal 11 digit'
+		nomerTelepon.style.color = "red"
 	}else if(nomer.length > 13){
 		abc.preventDefault()
-		nomerTelepon.textContent = 'Nomor telepon harus maksimal 13 digit'	
+		nomerTelepon.textContent = 'Nomor telepon harus maksimal 13 digit'
+		nomerTelepon.style.color = "red"
 	}else{
 		nomerTelepon.textContent = ''
 	}
+
+// Validasi email dan WAJIB diisi
+	// const cekEmail = /^[a-zA-Z0-9.! #$%&’+/=?^_` {|}~-]+@ [a-zA-Z0-9-]+ (. [a-zA-Z0-9-]+)$/
 })
