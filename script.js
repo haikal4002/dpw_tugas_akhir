@@ -40,31 +40,85 @@ form.addEventListener("submit", function(abc){
 	}
 
 // Validasi numerik dan WAJIB diisi
-	const nomerTelepon = document.querySelector(".nomertel")
-	const nomer = form.nomor.value
+	const nomor_alert = document.querySelector(".nomertel")
+	const nomer_value = form.nomor.value
 	const cekNum =/^[\d]+$/
-	console.log((!cekNum.test(nomer)))
 
-	if (nomer === ""){
+	if (nomer_value === ""){
 		abc.preventDefault()
-		nomerTelepon.textContent = "Masukkan tidak boleh kosong"
-		nomerTelepon.style.color = "red"
-	}else if (!cekNum.test(nomer)){
+		nomor_alert.textContent = "Masukkan tidak boleh kosong"
+		nomor_alert.style.color = "red"
+	}else if (!cekNum.test(nomer_value)){
 		abc.preventDefault()
-		nomerTelepon.textContent = 'Masukkan format berupa numerik'
-		nomerTelepon.style.color = "red"
-	}else if(nomer.length < 11){
+		nomor_alert.textContent = 'Masukkan format berupa numerik'
+		nomor_alert.style.color = "red"
+	}else if(nomer_value.length < 11){
 		abc.preventDefault()
-		nomerTelepon.textContent = 'Nomor telepon harus minimal 11 digit'
-		nomerTelepon.style.color = "red"
-	}else if(nomer.length > 13){
+		nomor_alert.textContent = 'Nomor telepon harus minimal 11 digit'
+		nomor_alert.style.color = "red"
+	}else if(nomer_value.length > 13){
 		abc.preventDefault()
-		nomerTelepon.textContent = 'Nomor telepon harus maksimal 13 digit'
-		nomerTelepon.style.color = "red"
+		nomor_alert.textContent = 'Nomor telepon harus maksimal 13 digit'
+		nomor_alert.style.color = "red"
 	}else{
-		nomerTelepon.textContent = ''
+		nomor_alert.textContent = ''
+	}
+
+// Validasi dropdown yang WAJIB diisi
+	const dropdown_alert = document.querySelector(".dropdowns")
+	const dropdown_value = form.kategori.value
+
+	if (dropdown_value === ""){
+		abc.preventDefault()
+		dropdown_alert.textContent = "Masukkan tidak boleh kosong"
+		dropdown_alert.style.color = "red"
+	}else{
+		dropdown_alert.textContent = ''
+	}
+
+
+// Validasi alamat dan WAJIB diisi
+	const alamat_alert = document.querySelector(".address")
+	const alamat_value = form.alamat.value
+	const cekALamat = /^[a-zA-Z0-9\.\,\/ ]+$/
+	if (alamat_value === ""){
+		abc.preventDefault()
+		alamat_alert.textContent = "Masukkan tidak boleh kosong"
+		alamat_alert.style.color = "red"
+	}else if (!cekALamat.test(alamat_value)){
+		abc.preventDefault()
+		alamat_alert.textContent = 'Masukan tidak boleh mengandung karakter asing'
+		alamat_alert.style.color = "red"
+	}else{
+		alamat_alert.textContent = ""
 	}
 
 // Validasi email dan WAJIB diisi
-	// const cekEmail = /^[a-zA-Z0-9.! #$%&’+/=?^_` {|}~-]+@ [a-zA-Z0-9-]+ (. [a-zA-Z0-9-]+)$/
+	const email_alert = document.querySelector(".Email")
+	const email_value= form.email.value
+	const cekEmail = /^[a-zA-Z0-9]+@[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,}$/
+
+	if (email_value === ""){
+		abc.preventDefault()
+		email_alert.textContent = "Masukkan tidak boleh kosong"
+		email_alert.style.color = "red"
+	}else if (!cekEmail.test(email_value)){
+		abc.preventDefault()
+		email_alert.textContent = 'Masukan email dengan benar'
+		email_alert.style.color = "red"
+	}else{
+		email_alert.textContent = ""
+	}
+
+// Validasi checkbox yang WAJIB diisi
+	const checkbox_alert = document.querySelector(".centang")
+	const checkbox_value = form.checkbox
+
+	if (checkbox_value.checked){
+		checkbox_alert.textContent = ''
+	}else{
+		abc.preventDefault()
+		checkbox_alert.textContent = "Anda harus setuju dengan syarat dan ketentuan"
+		checkbox_alert.style.color = "red"
+	}
 })
