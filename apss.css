@@ -97,11 +97,13 @@ body {
     
 }
 
-.news img {
-    width: 80px;
+.sidebar .news img {
+    width: 100px;
+    height: 100px;
     margin: 10px;
-    
+    padding-top: 20px;
 }
+
 .news p {
     text-align: start;
     align-self: center;
