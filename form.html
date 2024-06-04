@@ -47,11 +47,11 @@
         <div class="content-form">
         <!-- Form pendaftaran menggunakan validasi javascripts-->
             <h2>FORM PENDAFTARAN</h2>
-            <form action="index.html" method="post">
+            <form action="index.html" method="post" id="masukan">
                 <!-- Membuat masukan nama -->
                 <label for="name">Nama Lengkap* :</label>
                 <input name="name" id="name" placeholder="Masukkan nama lengkap">
-                <div id="nameError" class="error"></div>
+                <div class="alfabet"></div>
                 <!-- Membuat radio button untuk memilih gender -->
                 <b>Pilih Gender :</b>
                 <br>
@@ -59,6 +59,7 @@
                 <input name="via" id="laki" value="laki" type="radio">
                 <label for="Perempuan">Perempuan</label>
                 <input name="via" id="Perempuan" value="Perempuan" type="radio">
+                <div class="radios"></div>
                 <br>
                 <!-- Membuat dropdown untuk memilihh Domisli-->
                 <label for="kategori">Pilih Tingkat Kesulitan</label>
@@ -80,6 +81,7 @@
                 <!-- Membuat msaukan nomor telepon -->
                 <label for="nomor">Masukan nomor telepon* :</label>
                 <input name="nomor" id="nomor" placeholder="Masukkan nomor telepon">
+                <div class="nomertel"></div>
                 <br>
                 <!-- Membuat msaukan alamat menggunakan textarea -->
                 <label>Masukkan Alamat* :</label>
@@ -98,6 +100,6 @@
     <div class="footer">
         <p>© Programmed by Group : DPW2023-2-A02</p>
     </div>
-    <script src="script.js"></script>
+    <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
