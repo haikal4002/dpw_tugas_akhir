@@ -96,7 +96,7 @@ form.addEventListener("submit", function(abc){
 // Validasi email dan WAJIB diisi
 	const email_alert = document.querySelector(".Email")
 	const email_value= form.email.value
-	const cekEmail = /^[a-zA-Z0-9]+@[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,}$/
+	const cekEmail = /^[a-z\d]+(\.[a-z\d]+)*@[a-z\d\-]+(\.[a-z\d]+)*\.[a-z]{2,}$/i
 
 	if (email_value === ""){
 		abc.preventDefault()
