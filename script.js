@@ -96,9 +96,9 @@ form.addEventListener("submit", function(abc){
 // Validasi email dan WAJIB diisi
 	const email_alert = document.querySelector(".Email")
 	const email_value= form.email.value
-	const cekEmail = /^[a-z\d]+(\.[a-z\d]+)*@[a-z\d\-]+(\.[a-z\d]+)*\.[a-z]{2,}$/i
-
-	if (email_value === ""){
+	const cekEmail =  /^([a-zA-Z0-9]+|[a-zA-Z0-9]+\.[a-zA-Z0-9]+)(@[a-zA-Z0-9]+|@[a-zA-Z0-9]+\-[a-zA-Z0-9]+)[.][a-zA-Z]{2,}$/
+	// const cekEmail = /^[a-z\d]+(\.[a-z\d]+)*@[a-z\d\-]+(\.[a-z\d]+)*\.[a-z]{2,}$/i
+	if (email_value === ""){  
 		abc.preventDefault()
 		email_alert.textContent = "Masukkan tidak boleh kosong"
 		email_alert.style.color = "red"
@@ -118,7 +118,25 @@ form.addEventListener("submit", function(abc){
 		checkbox_alert.textContent = ''
 	}else{
 		abc.preventDefault()
-		checkbox_alert.textContent = "Anda harus setuju dengan syarat dan ketentuan"
+		checkbox_alert.textContent = "Anda harus menyetujui dengan syarat dan ketentuan"
 		checkbox_alert.style.color = "red"
 	}
+
+// validasi tanggal hanya masa depan dan wajib diisi
+	const date_alert = document.querySelector(".dates")
+	const date_value = form.date.value
+	const cek_date = /^20([2-9][4-9]|[3-9][0])\-(0[1-9]|1[012])\-16$/
+
+	if (date_value === ""){  
+		abc.preventDefault()
+		date_alert.textContent = "Tanggal harus diisi"
+		date_alert.style.color = "red"
+	}else if (!cek_date.test(date_value)){
+		abc.preventDefault()
+		date_alert.textContent = 'Masukkan tangal pendaftaran dengan benar'
+		date_alert.style.color = "red"
+	}else{
+		date_alert.textContent = ""
+	}
+
 })
