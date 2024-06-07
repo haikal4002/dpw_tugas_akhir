@@ -204,6 +204,10 @@ body {
     padding: 1rem;
 }
 
+.content-evaluation .tabel .ket {
+    text-align: center;
+}
+
 .content-evaluation .tabel th, td {
     border: 1px solid black;
 } 
