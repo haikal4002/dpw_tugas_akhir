@@ -204,13 +204,13 @@ body {
     padding: 1rem;
 }
 
-.content-evaluation .tabel .ket {
-    text-align: center;
-}
-
 .content-evaluation .tabel th, td {
     border: 1px solid black;
 } 
+
+.content-evaluation .tabel .ket {
+    text-align: center;
+}
 
 .content-evaluation .tabel caption {
     font-size: 20px;
@@ -223,7 +223,7 @@ body {
 
 .content-evaluation .tabel tr:nth-child(even){
     background-color: #AFD7FF;
-}   
+}     
 
 /* About-Us */
 
