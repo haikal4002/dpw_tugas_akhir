@@ -204,8 +204,10 @@ body {
     width: 30px;
 }
 
-.container .content-form input[type="submit"]{
-    width:100px;
+.container .content-form button{
+    width: 100px;
+    height: 50px;
+    border-radius: 7px;
     background-color: #11749F;
     border: 2px solid #11749F;
     color: white;
@@ -217,7 +219,7 @@ body {
     padding: 0;
 }
 
-.container .content-form input[type="submit"]:hover {
+.container .content-form button:hover {
     background-color: transparent;
     border: 2px solid black;
     color: black;
@@ -285,9 +287,7 @@ body {
 
 .content_about_us .heading {
     justify-content: center;
-    text-align: center;
-    
-    
+    text-align: center;  
 }
 
 .content_about_us ul {
@@ -307,8 +307,6 @@ body {
     display: flex;
     flex-direction: column;
     /* background-color: red; */
-
-
 }
 
 .assets_all ul li {
@@ -332,5 +330,4 @@ body {
     padding: 0;
     width: 50%;
     border: 1px black dotted;
-
 }
