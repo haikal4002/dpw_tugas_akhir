@@ -27,23 +27,21 @@
     <div class="container">
     <!--    sidebar -->
         <div class="sidebar">
-            <h3>INFORMASI TEMPAT</h3>
-            <div class="sidebox">
-                <img src="assets/Pantai-kuta.jpg" alt="pantai kuta">
-                <p>Pantai Kuta adalah pantai yang landai dan juga tidak berkarang. Pantai ini cocok dengan surfing kareana memiliki ombak yang tidak cukup besar</p>
-            </div>
-            <div class="sidebox">
-                <img src="assets/pantai-canggu.jpg" alt="pantai Canggu">
-                <p>Pantai Canggu mempunyai keadaan surfing yang stabil selama setahun, karena letak geografis yang memberikan keuntungan dan cuaca tropisnya.</p>
-            </div>
-            <div class="sidebox">
-                <img src="assets/uluwatu-beach.jpg" alt="pantai uluwatu">
-                <p>Pantai Uluwatu adalah pantai yang mempunyai gelombang kecil hingga menengah, tetapi ada banyak air yang bergerak ketika gelombang ganda di atas kepala, jadi diperlukan papan yang lebih besar.</p>
-            </div>
-            <div class="sidebox">
-                <img src="assets/pantai-padang-padang.jpg" alt="pantai padang-padang">
-                <p>Pantai Padang-padang merupakan pantai yang memberikan sensasi yang sangat fantastis dan bahkan memberikan ombak yang tak kenal ampun.</p>
-            </div>
+            <h3>HEADLINE</h3>
+            <ul class="news">
+                <li>
+                    <img src="assets/news1.jpg" alt="news1">
+                    <p><a href="https://isasurf.org/news/">ISA World Masters Surfing</a></p>
+                </li>
+                <li>
+                    <img src="assets/news2.jpg" alt="news2">
+                    <p><a href="https://www.surfertoday.com/surfing/allwaves-the-submerged-pillow-wave-technology-made-in-belgium">the submerged pillow wave technology made in Belgium</a></p>
+                </li>
+                <li>
+                    <img src="assets/news3.jpg" alt="news3">
+                    <p><a href="https://www.surfertoday.com/surfing/oil-giant-shell-surf-sponsorships-under-fire-in-uk-guerrilla-billboard-protest">Oil giant Shell's surf sponsorships under fire in UK guerrilla billboard protest</a></p>
+                </li>
+            </ul>
         </div>
         <div class="content-form">
         <!-- Form pendaftaran menggunakan validasi javascripts-->
@@ -65,19 +63,14 @@
                 <br>
                 <!-- Membuat dropdown untuk memilihh Domisli-->
                 <label for="kategori">Pilih Tingkat Kesulitan</label>
-                <input id="kategori" name="kategori" list="kota" placeholder="Pilih Kategori">
-                <datalist id="kota">
-                    <option value="Easy Surfing">
-                    <option value="Medium Surfing">
-                    <option value="Hard Surfing">
-                    <option value="Expert Surfing">
-                </datalist>
+                <select id="kategori">
+                    <option value="" selected disabled hidden>Pilih Disini</option>
+                    <option value="1">Easy Surfing</option>
+                    <option value="2">Medium Surfing</option>
+                    <option value="3">Hard Surfing</option>
+                    <option value="4">Expert Surfing</option>
+                </select>
                 <div class="dropdowns"></div>
-                <br>
-                <!-- Membuat masukan tanggal -->
-                <label for="tanggal">Masukkan Tanggal :</label>
-                <input type="date" id="tanggal" name="date">
-                <div class="dates"></div>
                 <br>
                 <!-- Membuat masukan email -->
                 <label for="email">Email* :</label>
