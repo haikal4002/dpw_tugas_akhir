@@ -2,9 +2,7 @@
 body {
     padding: 0;
     margin: 0;
-    font-family: "Open Sans", sans-serif;
-    
-    
+    font-family: "Open Sans", sans-serif;  
 }
 
 .header{
@@ -17,7 +15,6 @@ body {
 
 .header a {
     width: 80px;
-    
 }
 
 .header img {
@@ -32,7 +29,6 @@ body {
     padding: 10px;
     align-self: center;
     margin-left: 15px;
-
 }
 
 .menu {
@@ -43,7 +39,6 @@ body {
     padding: 0;
     border-bottom: 3px solid #345965;
     border-top: 3px solid #345965;
-    
 }
 
 .menu .navbar {
@@ -52,7 +47,6 @@ body {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-
 }
 
 .menu .navbar li {
@@ -60,7 +54,6 @@ body {
     text-align: center;
     font-size: 15px;
     font-weight: 600;
-    
 }
 
 .menu .navbar li a {
@@ -76,14 +69,13 @@ body {
 
 .sidebar {
     width: 25%;
-    height: 1190px;
+    height: 1300px;
     background-color: #89cfef;
     margin: 20px;
     border-radius: 10px;
     text-align: center;
     display: flex;
     flex-direction: column;
-    
 }
 
 .sidebox {
@@ -95,6 +87,7 @@ body {
     margin: 20px;
     font-size: 11px;
 }
+ 
 .sidebox img {
     width: 70%;
     align-self: center;
@@ -103,6 +96,7 @@ body {
 }
 .sidebox p{
     text-align: justify;
+    font-size: 13px;
 }
 
 .footer {
@@ -143,6 +137,8 @@ body {
 .content h1{
     text-align: center;
 }
+
+/* ---------------------------------------------------------------------------------------- */
 
 /* Form */
 .container .content-form {
@@ -207,6 +203,8 @@ body {
     margin-top: 20px;
 }
 
+/* ---------------------------------------------------------------------------------------- */
+
 /* Evaluation */
 
 .content-evaluation {
@@ -248,6 +246,8 @@ body {
     background-color: #AFD7FF;
 }   
 
+/* ---------------------------------------------------------------------------------------- */
+
 /* About-Us */
 
 .content_about_us {
@@ -261,8 +261,6 @@ body {
 .content_about_us .heading {
     justify-content: center;
     text-align: center;
-    
-    
 }
 
 .content_about_us ul {
@@ -281,9 +279,6 @@ body {
 .assets_all ul {
     display: flex;
     flex-direction: column;
-    /* background-color: red; */
-
-
 }
 
 .assets_all ul li {
