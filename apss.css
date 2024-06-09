@@ -146,22 +146,8 @@ body {
 
 /* Form */
 .container .content-form {
-    background-color: #FDFDFD;
     width: 75%;
     padding: 25px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-}
-
-.container .content-form .inputan {
-    width: 94%;
-    margin-top: 10px;
-}
-
-.container .content-form #masukan textarea{
-    width: 94%;
-    margin-top: 10px;
 }
 
 .container .content-form .wajib {
@@ -173,12 +159,13 @@ body {
 }
 
 .container .content-form h2 {
+    margin-bottom: 60px;
     text-align: center;    
 }
 
 .container .content-form input,textarea{
-/*    margin-bottom: 40px;*/
-    width: 100%;
+    margin-top: 10px;
+    width: 95%;
     padding: 10px;
     border: 2px solid;
     border-radius: 7px;
@@ -195,6 +182,12 @@ body {
     width: 30px;
 }
 
+.container .content-form input[type="checkbox"]{
+    width: 15px;
+    margin-left: 7px;
+    padding: 0;
+}
+
 .container .content-form button{
     width: 100px;
     height: 50px;
@@ -204,21 +197,10 @@ body {
     color: white;
     transition: 0.3s;
 }
-.container .content-form input[type="checkbox"]{
-    width: 15px;
-    margin-left: 7px;
-    padding: 0;
-}
-
 .container .content-form button:hover {
     background-color: transparent;
     border: 2px solid black;
     color: black;
-}
-
-.persetujuan {
-    display: flex;
-    text-align: center;
 }
 
 .alfabet, .radios, .dropdowns, .dates, .Email, .nomertel, .address, .centang {
@@ -325,5 +307,4 @@ body {
     padding: 0;
     width: 50%;
     border: 1px black dotted;
-
 }
