@@ -63,21 +63,16 @@
                 <input name="via" id="Perempuan" value="Perempuan" type="radio">
                 <div class="radios"></div>
                 <br>
-                <!-- Membuat dropdown untuk memilihh Domisli-->
+                <!-- Membuat dropdown untuk memilihh tingkat kesulitan-->
                 <label for="kategori">Pilih Tingkat Kesulitan <span class="wajib">*</span></label>
-                <input id="kategori" name="kategori" list="kota" placeholder="Pilih Kategori">
-                <datalist id="kota">
-                    <option value="Easy Surfing">
-                    <option value="Medium Surfing">
-                    <option value="Hard Surfing">
-                    <option value="Expert Surfing">
-                </datalist>
+                <select id="kategori">
+                    <option value="" selected disabled hidden>Pilih Disini</option>
+                    <option value="1">Easy Surfing</option>
+                    <option value="2">Medium Surfing</option>
+                    <option value="3">Hard Surfing</option>
+                    <option value="4">Expert Surfing</option>
+                </select>
                 <div class="dropdowns"></div>
-                <br>
-                <!-- Membuat masukan tanggal -->
-                <label for="tanggal">Masukkan Tanggal <span class="wajib">*</span> :</label>
-                <input type="date" id="tanggal" name="date">
-                <div class="dates"></div>
                 <br>
                 <!-- Membuat masukan email -->
                 <label for="email">Email <span class="wajib">*</span> :</label>
