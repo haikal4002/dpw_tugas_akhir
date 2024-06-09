@@ -6,13 +6,13 @@
     <!--    mengontrol tampilan skala halaman sesuai dengan perangkat -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form</title>
-    <link rel="stylesheet" href="apss.css">
+    <link rel="stylesheet" href="new.css">
 </head>
 <body>
     <!--    header -->
     <div class="header">
         <a href="index.html"><img src="assets/surfing.png" alt="logo"></a>
-        <p>Olahraga <br>Selancar</p>
+        <p>Kompetisi <br>Selancar</p>
     </div>
     <!--    menu navbar -->
     <div class="menu">
@@ -27,35 +27,33 @@
     <div class="container">
     <!--    sidebar -->
         <div class="sidebar">
-            <h3>INFORMASI TEMPAT</h3>
-            <div class="sidebox">
-                <img src="assets/Pantai-Kuta.jpg" alt="pantai kuta">
-                <p>Pantai Kuta adalah pantai yang landai dan juga tidak berkarang. Pantai ini cocok dengan surfing kareana memiliki ombak yang tidak cukup besar</p>
-            </div>
-            <div class="sidebox">
-                <img src="assets/pantai-canggu.jpg" alt="pantai Canggu">
-                <p>Pantai Canggu mempunyai keadaan surfing yang stabil selama setahun, karena letak geografis yang memberikan keuntungan dan cuaca tropisnya.</p>
-            </div>
-            <div class="sidebox">
-                <img src="assets/uluwatu-beach.jpg" alt="pantai uluwatu">
-                <p>Pantai Uluwatu adalah pantai yang mempunyai gelombang kecil hingga menengah, tetapi ada banyak air yang bergerak ketika gelombang ganda di atas kepala, jadi diperlukan papan yang lebih besar.</p>
-            </div>
-            <div class="sidebox">
-                <img src="assets/pantai-padang-padang.jpg" alt="pantai padang-padang">
-                <p>Pantai Padang-padang merupakan pantai yang memberikan sensasi yang sangat fantastis dan bahkan memberikan ombak yang tak kenal ampun.</p>
-            </div>
+            <h3>HEADLINE</h3>
+            <ul class="news">
+                <li>
+                    <img src="assets/news1.jpg" alt="news1">
+                    <p><a href="https://isasurf.org/news/">ISA World Masters Surfing</a></p>
+                </li>
+                <li>
+                    <img src="assets/news2.jpg" alt="news2">
+                    <p><a href="https://www.surfertoday.com/surfing/allwaves-the-submerged-pillow-wave-technology-made-in-belgium">the submerged pillow wave technology made in Belgium</a></p>
+                </li>
+                <li>
+                    <img src="assets/news3.jpg" alt="news3">
+                    <p><a href="https://www.surfertoday.com/surfing/oil-giant-shell-surf-sponsorships-under-fire-in-uk-guerrilla-billboard-protest">Oil giant Shell's surf sponsorships under fire in UK guerrilla billboard protest</a></p>
+                </li>
+            </ul>
         </div>
         <div class="content-form">
         <!-- Form pendaftaran menggunakan validasi javascripts-->
             <h2>FORM PENDAFTARAN</h2>
             <form action="index.html" method="post" id="masukan">
                 <!-- Membuat masukan nama -->
-                <label for="name">Nama Lengkap* :</label>
+                <label for="name">Nama Lengkap <span class="wajib">*</span> :</label>
                 <input name="name" id="name" placeholder="Masukkan nama lengkap">
                 <div class="alfabet"></div>
                 <br>
                 <!-- Membuat radio button untuk memilih gender -->
-                <b>Pilih Gender :</b>
+                <b>Pilih Gender <span class="wajib">*</span> :</b>
                 <br>
                 <label for="laki">Laki-laki</label>
                 <input name="via" id="laki" value="laki" type="radio">
@@ -64,33 +62,38 @@
                 <div class="radios"></div>
                 <br>
                 <!-- Membuat dropdown untuk memilihh Domisli-->
-                <label for="kategori">Pilih Tingkat Kesulitan</label>
-                <select id="kategori">
-                    <option value="" selected disabled hidden>Pilih Disini</option>
-                    <option value="1">Easy Surfing</option>
-                    <option value="2">Medium Surfing</option>
-                    <option value="3">Hard Surfing</option>
-                    <option value="4">Expert Surfing</option>
-                </select>
+                <label for="kategori">Pilih Tingkat Kesulitan <span class="wajib">*</span></label>
+                <input id="kategori" name="kategori" list="kota" placeholder="Pilih Kategori">
+                <datalist id="kota">
+                    <option value="Easy Surfing">
+                    <option value="Medium Surfing">
+                    <option value="Hard Surfing">
+                    <option value="Expert Surfing">
+                </datalist>
                 <div class="dropdowns"></div>
                 <br>
+                <!-- Membuat masukan tanggal -->
+                <label for="tanggal">Masukkan Tanggal <span class="wajib">*</span> :</label>
+                <input type="date" id="tanggal" name="date">
+                <div class="dates"></div>
+                <br>
                 <!-- Membuat masukan email -->
-                <label for="email">Email* :</label>
+                <label for="email">Email <span class="wajib">*</span> :</label>
                 <input name="email" id="email" placeholder="Masukkan email">
                 <div class="Email"></div>
                 <br>
                 <!-- Membuat msaukan nomor telepon -->
-                <label for="nomor">Masukan nomor telepon* :</label>
+                <label for="nomor">Masukan nomor telepon <span class="wajib">*</span> :</label>
                 <input name="nomor" id="nomor" placeholder="Masukkan nomor telepon">
                 <div class="nomertel"></div>
                 <br>
                 <!-- Membuat msaukan alamat menggunakan textarea -->
-                <label>Masukkan Alamat* :</label>
+                <label for="alamat">Masukkan Alamat <span class="wajib">*</span> :</label>
                 <textarea id="alamat" name="alamat" cols="30" rows="1" placeholder="Masukkan Alamat"></textarea>
                 <div class="address"></div>
                 <br>
                 <!-- Membuat checkbox untuk menyetujui SK -->
-                <label for="checkbox"> Setuju menerima dan mengikuti syarat dan ketentuan yang berlaku</label>
+                <label for="checkbox"> Saya setuju untuk membagikan informasi pribadi dan mengikuti syarat dan ketentuan yang berlaku</label>
                 <input type="checkbox" id="checkbox" name="checkbox" value="Option 1">
                 <div class="centang"></div>
                 <br> 
