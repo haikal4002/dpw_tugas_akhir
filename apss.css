@@ -3,6 +3,7 @@ body {
     padding: 0;
     margin: 0;
     font-family: "Open Sans", sans-serif;  
+    background-color: #EAEAEA;
 }
 
 .header{
@@ -69,7 +70,7 @@ body {
 
 .sidebar {
     width: 25%;
-    height: 1400px;
+    height: 1500px;
     background-color: #89cfef;
     margin: 20px;
     border-radius: 10px;
@@ -123,19 +124,16 @@ body {
 }
 
 .content img{
+    border-radius: 10px;
     display: block;
     margin-left: auto;
     margin-right: 25%;
-    width: 50%;
+    width: 100%;
 }
 
 .content p{
     text-align: justify;
     margin-right: 5px;
-}
-
-.content h1{
-    text-align: center;
 }
 
 .card{
@@ -144,7 +142,7 @@ body {
     justify-content: space-between;
     flex-wrap: wrap;
     width: 100%;
-    height: 800px;
+    height: 1500px;
     margin-top: 30px;
     margin-bottom: 20px;
     margin-left: 0;
@@ -154,17 +152,19 @@ body {
     text-align: center;
     justify-content: center;
     width: 430px;
-	/* border: 1px solid black; */
     height: 350px;
     border-radius: 10px;
     text-align: center;
-    margin: 0 0px;
 }
 
 .card-category img {
   width: 430px;
   height: 280px;
   border-radius: 10px;
+}
+
+.card-category ul li {
+    text-align: left;
 }
 /* ---------------------------------------------------------------------------------------- */
 
