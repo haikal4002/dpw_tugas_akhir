@@ -1,174 +1,216 @@
-const form = document.querySelector(".content-form form")
+// memanggil elemen form menggunakan query selector dan ditampung di dalam variable form
+const form = document.getElementById('masukan')
 
-form.addEventListener("submit", function(abc){
-
-// Validasi alphabet dan WAJIB diisi
-	const alfa = document.querySelector(".alfabet")
-	const tes = form.name.value
-	const alphabet = /^([a-zA-Z]+|[a-zA-Z]+[ ][a-zA-Z]+)$/
-
-	if (tes === ""){
-		abc.preventDefault()
-		form.name.style.border = "2px solid red"
-		form.name.style.outline = "none"
-		alfa.textContent = "Masukkan tidak boleh kosong"
-		alfa.style.color = "red"
-	}else if(tes.length < 2){
-		abc.preventDefault()
-		form.name.style.border = "2px solid red"
-		form.name.style.outline = "none"
-		alfa.textContent = 'Nama terlalu pendek'
-		alfa.style.color = "red"
-	}else if (!alphabet.test(tes)){
-		abc.preventDefault()
-		form.name.style.border = "2px solid red"
-		form.name.style.outline = "none"
-		alfa.textContent = 'Masukkan format berupa alfabet'
-		alfa.style.color = "red"	
-	}else{
-		form.name.style.border = "2px solid #00DE46"
-		form.name.style.outline = "none"
-		alfa.textContent = ""	
-	}
-
-// Validasi radio button dan WAJIB diisi
-	const radioo = document.querySelector(".radios")
-	const radio = form.via
-
-	let valid = false
-	for (let i = 0; i < radio.length; i++){
-		if(radio[i].checked){
-			valid = true
-			break
-		}
-	}
-
-	if (valid){
-		radioo.textContent = ""
+// function untuk mengecek value apakah bernilai kosong atau tidak
+function input_kosong(e){
+	// jika parameter e bernilai string kosong maka function ini akan di retrun true
+	if (e == ""){
+		return true
+	// jika parameter e tidak bernilai string kosong maka function ini akan di retrun false
 	} else {
-		abc.preventDefault()
-		radioo.textContent = "Harus memilih salah satu"
-		radioo.style.color = "red"
+		return false
+	}
+}
+
+// VALIDASI CHECKBOX PERSETUJUAN
+const checkbox_value = form.checkbox
+// variable penyimpan list ketika user click centang pada checkbox maka variable ini akan ditambahkan sebuah nilai
+var list_checkbox = []
+// ketika checkbox di click, eventListener ini akan menjalankan suatu function anonymous(tanpa nama)
+checkbox_value.addEventListener("click", function(){
+	// jika panjang variable list_checkbox sama dengan 0 maka string centang akan di tambahkan ke dalam list_checkbox
+	if (list_checkbox.length == 0){
+		list_checkbox.push("centang")
+	// jika panjang variable list_checkbox selain sama dengan 0 maka string centang akan di keluarkan dalam list_checkbox
+	} else {
+		list_checkbox.pop()
+	}
+})
+
+// ketika form di submit, eventListener ini akan menjalankan suatu function anonymous(tanpa nama) dengan parameter abc
+form.addEventListener("submit", function(abc){
+	// Mencegah form dikirim dan harus melalui pengecekan terlebih dahulu
+	abc.preventDefault()
+
+	// VALIDASI INPUTAN NAMA LENGKAP
+	// memanggil class alfabet pada html dan di tampung ke dalam variable alfabet_alert 
+	const alfabet_alert = document.querySelector(".alfabet")
+	// memanggil value dari inputan yang mempunyai name = nama yang berada didalam form
+	const username_value = form.name.value
+	// regex untuk mengecek inputan berupa alfabet atau tidak, dan apakah ada spasi yang diapit oleh alfabet
+	const alphabet = /^([a-zA-Z]+|[a-zA-Z]+[ ][a-zA-Z]+)$/
+	// Jika value dari inputan nama bernilai kosong maka code di bawah ini akan di eksekusi
+	if (input_kosong(username_value)){
+		// mengubah border inputan menjadi tabalnya 2px jenis garis solid dan berwarna merah
+		form.name.style.border = "2px solid red"
+		// Mengganti text pada elemen html yang telah di panggil dan ditampung pada variable alfabet_alert
+		alfabet_alert.textContent = "Inputan tidak boleh kosong!!"
+	// Jika hasil test value dari inputan bernilai false maka akan di not yang dilambangkan dengan tanda ! dan code dibawah akan dijalankan
+	}else if (!alphabet.test(username_value)){
+		// mengubah border inputan menjadi tabalnya 2px jenis garis solid dan berwarna merah
+		form.name.style.border = "2px solid red"
+		// Mengganti text pada elemen html yang telah di panggil dan ditampung pada variable alfabet_alert
+		alfabet_alert.textContent = 'Format inputan hanya boleh berupa alfabet tanpa diakhiri atau diawali dengan spasi!!'
+	// Jika panjang inputan kurang dari 3 maka code di bawah akan di jalankan
+	}else if(username_value.length < 3){
+		// mengubah border inputan menjadi tabalnya 2px jenis garis solid dan berwarna merah
+		form.name.style.border = "2px solid red"
+		// Mengganti text pada elemen html yang telah di panggil dan ditampung pada variable alfabet_alert
+		alfabet_alert.textContent = 'Inputan minimal harus berjumlah 3 karakter!!'
+	// Jika selain dari 3 kondisi tadi tidak terpenuhi maka perkondisian else akan dijalankan
+	}else{
+		// mengubah border inputan menjadi tabalnya 2px jenis garis solid dan berwarna berupa format heksadesimal dari warna hijau
+		form.name.style.border = "2px solid #00DE46"
+		// Mengubah text pada elemen html yang telah di panggil dan ditampung pada variable alfabet_alert menjadi string kosong
+		alfabet_alert.textContent = ""	
 	}
 
-// Validasi dropdown yang WAJIB diisi
-	const dropdown_alert = document.querySelector(".dropdowns")
-	const dropdown_value = form.kategori.value
+// VALIDASI INPUTAN PILIHAN GENDER
+	// memanggil class radios pada html dan di tampung ke dalam variable radio_alert
+	const radio_alert = document.querySelector(".radios")
+	// memanggil value dari inputan yang mempunyai name = via yang berada didalam form
+	const radio = form.via.value
+	// Jika value dari inputan bernama via bernilai kosong maka code di bawah ini akan di eksekusi
+	if (input_kosong(radio)){
+		// Mengganti text pada elemen html yang telah di panggil dan ditampung pada variable radio_alert
+		radio_alert.textContent = "Wajib memilih salah satu!!"
+	// Jika selain dari kondisi diatas tidak terpenuhi maka perkondisian else akan dijalankan
+	} else {
+		// Mengubah text pada elemen html yang telah di panggil dan ditampung pada variable radio_alert menjadi string kosong
+		radio_alert.textContent = ""
+	}
 
-	if (dropdown_value === ""){
-		abc.preventDefault()
+// VALIDASI DROPDOWN TINGKAT KESULITAN
+	// memanggil class dropdowns pada html dan di tampung ke dalam variable dropdown_alert
+	const dropdown_alert = document.querySelector(".dropdowns")
+	// memanggil value dari inputan yang mempunyai name = kategori yang berada didalam form
+	const dropdown_value = form.kategori.value
+	// Jika value dari inputan bernama kategori bernilai kosong maka code di bawah ini akan di eksekusi
+	if (input_kosong(dropdown_value)){
+		// mengubah border inputan menjadi tabalnya 2px jenis garis solid dan berwarna merah
 		form.kategori.style.border = "2px solid red"
-		form.kategori.style.outline = "none"
-		dropdown_alert.textContent = "Masukkan tidak boleh kosong"
-		dropdown_alert.style.color = "red"
+		// Mengganti text pada elemen html yang telah di panggil dan ditampung pada variable dropdown_alert
+		dropdown_alert.textContent = "Wajib memilih salah satu!!"
+	// Jika selain dari kondisi diatas tidak terpenuhi maka perkondisian else akan dijalankan
 	}else{
+		// mengubah border inputan menjadi tabalnya 2px jenis garis solid dan berwarna berupa format heksadesimal dari warna hijau
 		form.kategori.style.border = "2px solid #00DE46"
-		form.kategori.style.outline = "none"
+		// Mengubah text pada elemen html yang telah di panggil dan ditampung pada variable dropdown_alert menjadi string kosong
 		dropdown_alert.textContent = ''
 	}
 
-
-// Validasi email dan WAJIB diisi
+// VALIDASI INPUTAN EMAIL
+	// memanggil class Email pada html dan di tampung ke dalam variable email_alert
 	const email_alert = document.querySelector(".Email")
-	const email_value= form.email.value
-	const cekEmail =  /^([a-zA-Z0-9]+|[a-zA-Z0-9]+\.[a-zA-Z0-9]+)(@[a-zA-Z0-9]+|@[a-zA-Z0-9]+\-[a-zA-Z0-9]+)[.][a-zA-Z]{2,}$/
-	// const cekEmail = /^[a-z\d]+(\.[a-z\d]+)@[a-z\d\-]+(\.[a-z\d]+)\.[a-z]{2,}$/i
-	if (email_value === ""){  
-		abc.preventDefault()
+	// memanggil value dari inputan yang mempunyai name = email yang berada didalam form
+	const email_value = form.email.value
+	// regex untuk mengecek inputan telah sesuai dengan format email apa tidak
+	const cekEmail = /^[a-z\d]+(\.[a-z\d]+)*@[a-z\d\-]+(\.[a-z\d]+)*\.[a-z]{2,}$/i
+	// Jika value dari inputan bernama kategori bernilai kosong maka code di bawah ini akan di eksekusi
+	if (input_kosong(email_value)){  
+		// mengubah border inputan menjadi tabalnya 2px jenis garis solid dan berwarna merah
 		form.email.style.border = "2px solid red"
-		form.email.style.outline = "none"
-		email_alert.textContent = "Masukkan tidak boleh kosong"
-		email_alert.style.color = "red"
+		// Mengganti text pada elemen html yang telah di panggil dan ditampung pada variable email_alert
+		email_alert.textContent = "Inputan tidak boleh kosong!!"
+	// Jika hasil test value dari inputan bernilai false maka akan di not yang dilambangkan dengan tanda ! dan code dibawah akan dijalankan
 	}else if (!cekEmail.test(email_value)){
-		abc.preventDefault()
+		// mengubah border inputan menjadi tabalnya 2px jenis garis solid dan berwarna merah
 		form.email.style.border = "2px solid red"
-		form.email.style.outline = "none"
-		email_alert.textContent = 'Masukan email dengan benar'
-		email_alert.style.color = "red"
+		// Mengganti text pada elemen html yang telah di panggil dan ditampung pada variable email_alert
+		email_alert.textContent = 'Email tidak valid, periksa kembali simbol atau penamaan pada email anda!!'
+	// Jika selain dari 2 kondisi diatas tidak terpenuhi maka perkondisian else akan dijalankan
 	}else{
+		// mengubah border inputan menjadi tabalnya 2px jenis garis solid dan berwarna berupa format heksadesimal dari warna hijau
 		form.email.style.border = "2px solid #00DE46"
-		form.email.style.outline = "none"
+		// Mengubah text pada elemen html yang telah di panggil dan ditampung pada variable email_alert menjadi string kosong
 		email_alert.textContent = ""
 	}
 
-// Validasi numerik dan WAJIB diisi
+// VALIDASI INPUTAN NOMOR TELPON
+	// memanggil class nomertel pada html dan di tampung ke dalam variable nomor_alert
 	const nomor_alert = document.querySelector(".nomertel")
+	// memanggil value dari inputan yang mempunyai name = nomor yang berada didalam form
 	const nomer_value = form.nomor.value
+	// regex untuk mengecek inputan berupa numerik atau tidak
 	const cekNum =/^[\d]+$/
-
-	if (nomer_value === ""){
-		abc.preventDefault()
+	// Jika value dari inputan bernama kategori bernilai kosong maka code di bawah ini akan di eksekusi
+	if (input_kosong(nomer_value)){
+		// mengubah border inputan menjadi tabalnya 2px jenis garis solid dan berwarna merah
 		form.nomor.style.border = "2px solid red"
-		form.nomor.style.outline = "none"
-		nomor_alert.textContent = "Masukkan tidak boleh kosong"
-		nomor_alert.style.color = "red"
+		// Mengganti text pada elemen html yang telah di panggil dan ditampung pada variable nomor_alert
+		nomor_alert.textContent = "Inputan tidak boleh kosong!!"
+	// Jika hasil test value dari inputan bernilai false maka akan di not yang dilambangkan dengan tanda ! dan code dibawah akan dijalankan
 	}else if (!cekNum.test(nomer_value)){
-		abc.preventDefault()
+		// mengubah border inputan menjadi tabalnya 2px jenis garis solid dan berwarna merah
 		form.nomor.style.border = "2px solid red"
-		form.nomor.style.outline = "none"
-		nomor_alert.textContent = 'Masukkan format berupa numerik'
-		nomor_alert.style.color = "red"
-	}else if(nomer_value.length < 11){
-		abc.preventDefault()
+		// Mengganti text pada elemen html yang telah di panggil dan ditampung pada variable nomor_alert
+		nomor_alert.textContent = 'Format inputan harus berupa numerik!!'// Jika panjang inputan kurang dari 3 maka code di bawah akan di jalankan
+	// Jika panjang inputan kurang dari 11 atau lebih dari 13 maka code di bawah akan di jalankan
+	}else if(nomer_value.length < 11 | nomer_value.length > 13){
+		// mengubah border inputan menjadi tabalnya 2px jenis garis solid dan berwarna merah
 		form.nomor.style.border = "2px solid red"
-		form.nomor.style.outline = "none"
-		nomor_alert.textContent = 'Nomor telepon harus minimal 11 digit'
-		nomor_alert.style.color = "red"
-	}else if(nomer_value.length > 13){
-		abc.preventDefault()
-		form.nomor.style.border = "2px solid red"
-		form.nomor.style.outline = "none"
-		nomor_alert.textContent = 'Nomor telepon harus maksimal 13 digit'
-		nomor_alert.style.color = "red"
+		// Mengganti text pada elemen html yang telah di panggil dan ditampung pada variable nomor_alert
+		nomor_alert.textContent = 'Nomor telepon harus minimal 11 digit dan maksimal 13 digit!!'
+	// Jika selain dari 3 kondisi diatas tidak terpenuhi maka perkondisian else akan dijalankan
 	}else{
+		// mengubah border inputan menjadi tabalnya 2px jenis garis solid dan berwarna berupa format heksadesimal dari warna hijau
 		form.nomor.style.border = "2px solid #00DE46"
-		form.nomor.style.outline = "none"
-		nomor_alert.textContent = ''
+		// Mengubah text pada elemen html yang telah di panggil dan ditampung pada variable nomor_alert menjadi string kosong
+		nomor_alert.textContent = ""
 	}
 
-
-
-// Validasi alamat dan WAJIB diisi
+// VALIDASI INPUTAN ALAMAT
+	// memanggil class address pada html dan di tampung ke dalam variable alamat_alert
 	const alamat_alert = document.querySelector(".address")
+	// memanggil value dari inputan yang mempunyai name = alamat yang berada didalam form
 	const alamat_value = form.alamat.value
+	// regex untuk mengecek inputan berupa alfanumerik yang mengandung tanda baca . , / atau tidak
 	const cekALamat = /^[a-zA-Z0-9\.\,\/ ]+$/
-	if (alamat_value === ""){
-		abc.preventDefault()
+
+	// Jika value dari inputan bernama kategori bernilai kosong maka code di bawah ini akan di eksekusi
+	if (input_kosong(alamat_value)){
+		// mengubah border inputan menjadi tabalnya 2px jenis garis solid dan berwarna merah
 		form.alamat.style.border = "2px solid red"
-		form.alamat.style.outline = "none"
-		alamat_alert.textContent = "Masukkan tidak boleh kosong"
-		alamat_alert.style.color = "red"
+		// Mengganti text pada elemen html yang telah di panggil dan ditampung pada variable alamat_alert
+		alamat_alert.textContent = "Inputan tidak boleh kosong!!"
+	// Jika hasil test value dari inputan bernilai false maka akan di not yang dilambangkan dengan tanda ! dan code dibawah akan dijalankan
 	} else if (!cekALamat.test(alamat_value)){
-		abc.preventDefault()
+		// mengubah border inputan menjadi tabalnya 2px jenis garis solid dan berwarna merah
 		form.alamat.style.border = "2px solid red"
-		form.alamat.style.outline = "none"
-		alamat_alert.textContent = 'Masukan tidak boleh mengandung simbol selain "." "," "/"'
-		alamat_alert.style.color = "red"
-	}
-	else if (alamat_value.length < 10){
-		abc.preventDefault()
+		// Mengganti text pada elemen html yang telah di panggil dan ditampung pada variable alamat_alert
+		alamat_alert.textContent = 'Inputan tidak boleh mengandung simbol selain "." "," "/"!!'
+	// Jika panjang inputan kurang dari 10 maka code di bawah akan di jalankan
+	}else if (alamat_value.length < 10){
+		// mengubah border inputan menjadi tabalnya 2px jenis garis solid dan berwarna merah
 		form.alamat.style.border = "2px solid red"
-		form.alamat.style.outline = "none"
-		alamat_alert.textContent = "Inputan Alamat harus minimal 10 karakter"
-		alamat_alert.style.color = "red"
+		// Mengganti text pada elemen html yang telah di panggil dan ditampung pada variable alamat_alert
+		alamat_alert.textContent = "Inputan Alamat harus minimal 10 karakter!!"
+	// Jika selain dari 3 kondisi diatas tidak terpenuhi maka perkondisian else akan dijalankan
 	}else{
+		// mengubah border inputan menjadi tabalnya 2px jenis garis solid dan berwarna berupa format heksadesimal dari warna hijau
 		form.alamat.style.border = "2px solid #00DE46"
-		form.alamat.style.outline = "none"
+		// Mengubah text pada elemen html yang telah di panggil dan ditampung pada variable alamat_alert menjadi string kosong
 		alamat_alert.textContent = ""
 	}
 
-
-// Validasi checkbox yang WAJIB diisi
+	// MENAMBAHKAN PESAN PERINGATAN DIBAWAH INPUTAN CHECKBOX PERSETUJUAN 
+	// memanggil class centang pada html dan di tampung ke dalam variable checkbox_alert
 	const checkbox_alert = document.querySelector(".centang")
-	const checkbox_value = form.checkbox
-
-	if (checkbox_value.checked){
-		checkbox_alert.textContent = ''
-	}else{
-		abc.preventDefault()
-		checkbox_alert.textContent = "Anda harus menyetujui dengan syarat dan ketentuan"
-		checkbox_alert.style.color = "red"
+	// Jika variable list_checkbox pada line 18 mempunyai panjang sama dengan 0 maka code di bawah ini akan di eksekusi
+	if (list_checkbox.length == 0){
+		// Mengganti text pada elemen html yang telah di panggil dan ditampung pada variable checkbox_alert
+		checkbox_alert.textContent = "Anda harus bersedia membagikan informasi dan menyetujui peraturan sebelum melanjutkan!!"
+	// Jika variable list_checkbox pada line 18 mempunyai panjang selain 0 maka code di bawah ini akan di jalankan
+	} else {
+		// Mengubah text pada elemen html yang telah di panggil dan ditampung pada variable checkbox_alert menjadi string kosong
+		checkbox_alert.textContent = ""
 	}
 
-
+	// Perkondisian dimana jika kotak peringatan dari masing-masing inputan berupa string kosong maka data inputan akan dikirimkan 
+	if (alfabet_alert.textContent == "" && radio_alert.textContent == "" && dropdown_alert.textContent == "" 
+		&& email_alert.textContent == "" && nomor_alert.textContent == "" && alamat_alert.textContent == ""
+		&& checkbox_alert.textContent == ""){
+		// ini menandakan seluruh inputan telah di lakukan pengecekan dan kemudian form akan dikirim menggunakan method submit()
+		form.submit()
+	}
 })
