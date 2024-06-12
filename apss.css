@@ -193,6 +193,7 @@ body {
     padding: 10px;
     border: 2px solid;
     border-radius: 7px;
+    outline: none;
 }
 .container .content-form select{
     margin-top: 10px;
@@ -229,6 +230,7 @@ body {
 
 .alfabet, .radios, .dropdowns, .dates, .Email, .nomertel, .address, .centang {
     margin-top: 20px;
+    color: red;
 }
 
 /* ---------------------------------------------------------------------------------------- */
