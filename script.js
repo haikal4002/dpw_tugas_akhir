@@ -38,7 +38,7 @@ form.addEventListener("submit", function(abc){
 	// memanggil value dari inputan yang mempunyai name = nama yang berada didalam form
 	const username_value = form.name.value
 	// regex untuk mengecek inputan berupa alfabet atau tidak, dan apakah ada spasi yang diapit oleh alfabet
-	const alphabet = /^([a-zA-Z]+|[a-zA-Z]+[ ][a-zA-Z]+)$/
+	const alphabet = /^([a-zA-Z]+|[a-zA-Z]+[ ][a-zA-Z]+)+$/
 	// Jika value dari inputan nama bernilai kosong maka code di bawah ini akan di eksekusi
 	if (input_kosong(username_value)){
 		// mengubah border inputan menjadi tabalnya 2px jenis garis solid dan berwarna merah
