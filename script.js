@@ -178,33 +178,19 @@ form.addEventListener("submit", function(abc){
 		// Mengubah text pada elemen html yang telah di panggil dan ditampung pada variable alamat_alert menjadi string kosong
 		alamat_alert.textContent = ""
 	}
-	
-	// VALIDASI CHECKBOX PERSETUJUAN
-	const checkbox_value = form.checkbox
-	// variable penyimpan list ketika user click centang pada checkbox maka variable ini akan ditambahkan sebuah nilai
-	var list_checkbox = []
-	// ketika checkbox di click, eventListener ini akan menjalankan suatu function anonymous(tanpa nama)
-	checkbox_value.addEventListener("click", function(){
-	// jika panjang variable list_checkbox sama dengan 0 maka string centang akan di tambahkan ke dalam list_checkbox
-		if (list_checkbox.length == 0){
-			list_checkbox.push("centang")
-		// jika panjang variable list_checkbox selain sama dengan 0 maka string centang akan di keluarkan dalam list_checkbox
-		} else {
-			list_checkbox.pop()
-		}
-	})
 
 	// MENAMBAHKAN PESAN PERINGATAN DIBAWAH INPUTAN CHECKBOX PERSETUJUAN 
 	// memanggil class centang pada html dan di tampung ke dalam variable checkbox_alert
 	const checkbox_alert = document.querySelector(".centang")
+	const checkbox_value = document.getElementById('checkbox')
 	// Jika variable list_checkbox pada line 18 mempunyai panjang sama dengan 0 maka code di bawah ini akan di eksekusi
-	if (list_checkbox.length == 0){
+	if (checkbox_value.checked){
 		// Mengganti text pada elemen html yang telah di panggil dan ditampung pada variable checkbox_alert
-		checkbox_alert.textContent = "Anda harus bersedia membagikan informasi dan menyetujui peraturan sebelum melanjutkan!!"
+		checkbox_alert.textContent = ''
 	// Jika variable list_checkbox pada line 18 mempunyai panjang selain 0 maka code di bawah ini akan di jalankan
 	} else {
 		// Mengubah text pada elemen html yang telah di panggil dan ditampung pada variable checkbox_alert menjadi string kosong
-		checkbox_alert.textContent = ""
+		checkbox_alert.textContent = "Anda harus bersedia membagikan informasi dan menyetujui peraturan sebelum melanjutkan!!"
 	}
 
 	// Perkondisian dimana jika kotak peringatan dari masing-masing inputan berupa string kosong maka data inputan akan dikirimkan 
