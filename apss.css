@@ -201,6 +201,7 @@ body {
     padding: 10px;
     border: 2px solid;
     border-radius: 7px;
+    outline: none;
 }
 
 .container .content-form input[type="radio"] {
