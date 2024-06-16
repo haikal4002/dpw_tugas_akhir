@@ -12,14 +12,13 @@ function input_kosong(e){
 	}
 }
 
-
 // ketika form di submit, eventListener ini akan menjalankan suatu function anonymous(tanpa nama) dengan parameter abc
 form.addEventListener("submit", function(abc){
 	// Mencegah form dikirim dan harus melalui pengecekan terlebih dahulu
 	abc.preventDefault()
 
 	// VALIDASI INPUTAN NAMA LENGKAP
-	// memanggil class alfabet pada html dan di tampung ke dalam variable alfabet_alert 
+	//  memanggil elemen html yang mempunyai class alfabet pada html dan di tampung ke dalam variable alfabet_alert 
 	const alfabet_alert = document.querySelector(".alfabet")
 	// memanggil value dari inputan yang mempunyai name = nama yang berada didalam form
 	const username_value = form.name.value
@@ -52,7 +51,7 @@ form.addEventListener("submit", function(abc){
 	}
 
 // VALIDASI INPUTAN PILIHAN GENDER
-	// memanggil class radios pada html dan di tampung ke dalam variable radio_alert
+	//  memanggil elemen html yang mempunyai class radios pada html dan di tampung ke dalam variable radio_alert
 	const radio_alert = document.querySelector(".radios")
 	// memanggil value dari inputan yang mempunyai name = via yang berada didalam form
 	const radio = form.via.value
@@ -67,7 +66,7 @@ form.addEventListener("submit", function(abc){
 	}
 
 // VALIDASI DROPDOWN TINGKAT KESULITAN
-	// memanggil class dropdowns pada html dan di tampung ke dalam variable dropdown_alert
+	//  memanggil elemen html yang mempunyai class dropdowns pada html dan di tampung ke dalam variable dropdown_alert
 	const dropdown_alert = document.querySelector(".dropdowns")
 	// memanggil value dari inputan yang mempunyai name = kategori yang berada didalam form
 	const dropdown_value = form.kategori.value
@@ -86,7 +85,7 @@ form.addEventListener("submit", function(abc){
 	}
 
 // VALIDASI INPUTAN EMAIL
-	// memanggil class Email pada html dan di tampung ke dalam variable email_alert
+	//  memanggil elemen html yang mempunyai class Email pada html dan di tampung ke dalam variable email_alert
 	const email_alert = document.querySelector(".Email")
 	// memanggil value dari inputan yang mempunyai name = email yang berada didalam form
 	const email_value = form.email.value
@@ -113,7 +112,7 @@ form.addEventListener("submit", function(abc){
 	}
 
 // VALIDASI INPUTAN NOMOR TELPON
-	// memanggil class nomertel pada html dan di tampung ke dalam variable nomor_alert
+	// memanggil elemen html yang mempunyai class nomertel pada html dan di tampung ke dalam variable nomor_alert
 	const nomor_alert = document.querySelector(".nomertel")
 	// memanggil value dari inputan yang mempunyai name = nomor yang berada didalam form
 	const nomer_value = form.nomor.value
@@ -146,7 +145,7 @@ form.addEventListener("submit", function(abc){
 	}
 
 // VALIDASI INPUTAN ALAMAT
-	// memanggil class address pada html dan di tampung ke dalam variable alamat_alert
+	//  memanggil elemen html yang mempunyai class address pada html dan di tampung ke dalam variable alamat_alert
 	const alamat_alert = document.querySelector(".address")
 	// memanggil value dari inputan yang mempunyai name = alamat yang berada didalam form
 	const alamat_value = form.alamat.value
@@ -179,15 +178,17 @@ form.addEventListener("submit", function(abc){
 		alamat_alert.textContent = ""
 	}
 
-	// MENAMBAHKAN PESAN PERINGATAN DIBAWAH INPUTAN CHECKBOX PERSETUJUAN 
-	// memanggil class centang pada html dan di tampung ke dalam variable checkbox_alert
+	// VALIDASI INPUTAN CHECKBOX PERSETUJUAN
+
+	// memanggil elemen html yang mempunyai class centang pada html dan di tampung ke dalam variable checkbox_alert
 	const checkbox_alert = document.querySelector(".centang")
+	// memanggil elemen checkbox pada html dan di tampung ke dalam variable checkbox_value
 	const checkbox_value = document.getElementById('checkbox')
-	// Jika variable list_checkbox pada line 18 mempunyai panjang sama dengan 0 maka code di bawah ini akan di eksekusi
+	// Jika variable list_checkbox chacked/tercentang maka code di bawah ini akan di eksekusi
 	if (checkbox_value.checked){
-		// Mengganti text pada elemen html yang telah di panggil dan ditampung pada variable checkbox_alert
+		// Mengubah text pada elemen html yang telah di panggil dan ditampung pada variable checkbox_alert menjadi string kosong
 		checkbox_alert.textContent = ''
-	// Jika variable list_checkbox pada line 18 mempunyai panjang selain 0 maka code di bawah ini akan di jalankan
+	// Jika selain dari kondisi diatas tidak terpenuhi maka perkondisian else akan dijalankan
 	} else {
 		// Mengubah text pada elemen html yang telah di panggil dan ditampung pada variable checkbox_alert menjadi string kosong
 		checkbox_alert.textContent = "Anda harus bersedia membagikan informasi dan menyetujui peraturan sebelum melanjutkan!!"
