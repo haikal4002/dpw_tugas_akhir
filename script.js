@@ -163,7 +163,7 @@ form.addEventListener("submit", function(abc){
 		// mengubah border inputan menjadi tabalnya 2px jenis garis solid dan berwarna merah
 		form.alamat.style.border = "2px solid red"
 		// Mengganti text pada elemen html yang telah di panggil dan ditampung pada variable alamat_alert
-		alamat_alert.textContent = 'Inputan tidak boleh mengandung simbol selain "." "," "\"!!'
+		alamat_alert.textContent = 'Inputan tidak boleh mengandung simbol selain "." "," "/\\/"!!'
 	// Jika panjang inputan kurang dari 10 maka code di bawah akan di jalankan
 	}else if (alamat_value.length < 10){
 		// mengubah border inputan menjadi tabalnya 2px jenis garis solid dan berwarna merah
