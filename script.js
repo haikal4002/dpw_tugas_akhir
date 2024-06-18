@@ -50,7 +50,7 @@ form.addEventListener("submit", function(abc){
 		alfabet_alert.textContent = ""	
 	}
 
-// VALIDASI INPUTAN PILIHAN GENDER
+// VALIDASI INPUTAN PILIHAN METODE PEMBAYARAN
 	//  memanggil elemen html yang mempunyai class radios pada html dan di tampung ke dalam variable radio_alert
 	const radio_alert = document.querySelector(".radios")
 	// memanggil value dari inputan yang mempunyai name = via yang berada didalam form
